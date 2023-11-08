@@ -60,3 +60,7 @@ self.addEventListener('fetch', (event) => {
 
 	event.respondWith(respond());
 });
+
+self.addEventListener('push', (e) => {
+	console.log(e);
+});
