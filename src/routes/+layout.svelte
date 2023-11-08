@@ -5,6 +5,7 @@
 	// Floating UI for Popups
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 	import { storePopup } from '@skeletonlabs/skeleton';
+	import ShowDetails from '$lib/ShowDetails.svelte';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 </script>
 
@@ -17,6 +18,7 @@
 				<strong class="text-xl uppercase">Prospect Hill</strong>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
+				<ShowDetails />
 				<LightSwitch />
 			</svelte:fragment>
 		</AppBar>

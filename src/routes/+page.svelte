@@ -9,7 +9,7 @@
 		</div>
 		<AvailableShifts />
 
-		<p>Call the Help Desk on 02 1234 5678 if you're intrested.</p>
+		<p>Call the Help Desk on (02 1234 5678) if you're intrested.</p>
 
 		<div class="flex justify-center space-x-2">
 			<a class="btn variant-filled-primary" href="https://prospecthill.flowlogic.com.au">

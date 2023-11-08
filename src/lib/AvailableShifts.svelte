@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { Accordion, AccordionItem, SlideToggle } from '@skeletonlabs/skeleton';
-
+	import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
+	import isChecked from '$lib/ShowDetails.svelte';
+	let isChecked1: boolean;
 	let shiftTexts = [
 		{
 			line1: 'Open Shift Available',
@@ -23,15 +24,13 @@
 			line3: 'HTR-GV1 Lock Box 1187'
 		}
 	];
-	let isChecked: boolean = true;
-	let label: string = isChecked ? 'Close all' : 'Open all';
 </script>
 
-<div class="responsive-container !max-h-80 !overflow-y-scroll !w-full*.9 !m-2">
-	<div class="card p-4 bg-gradient-to-br variant-gradient-primary-secondary w-screen mr-5">
+<div class="!max-h-80 !overflow-y-scroll !w-96 !m-2">
+	<div class="card p-4 bg-gradient-to-br variant-gradient-primary-secondary !m-2">
 		<Accordion>
 			{#each shiftTexts as row, i}
-				<AccordionItem open={isChecked}>
+				<AccordionItem open={isChecked1}>
 					<svelte:fragment slot="lead">😃</svelte:fragment>
 					<svelte:fragment slot="summary"><h2>{row.line1}</h2></svelte:fragment>
 					<svelte:fragment slot="content">
@@ -48,6 +47,3 @@
 		</Accordion>
 	</div>
 </div>
-<SlideToggle name="show-details" bind:checked={isChecked}>
-	<span class="inline-block w-[100px] text-left"> {isChecked ? 'Cloae all' : 'Open all'}</span>
-</SlideToggle>
