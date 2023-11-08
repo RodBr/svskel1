@@ -13,12 +13,7 @@
 		<AvailableShifts />
 
 		<div class="flex justify-center space-x-2">
-			<a
-				class="btn variant-filled-primary"
-				href="https://prospecthill.flowlogic.com.au"
-				target="_blank"
-				rel="noreferrer"
-			>
+			<a class="btn variant-filled-primary" href="https://prospecthill.flowlogic.com.au">
 				Go to FlowLogic
 			</a>
 		</div>
