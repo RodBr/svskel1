@@ -28,7 +28,7 @@
 	];
 </script>
 
-<div class="!max-h-80 !overflow-y-scroll !w-96 !m-2">
+<div class="!max-h-80 !overflow-y-scroll !m-2">
 	<div class="card p-4 bg-gradient-to-br variant-gradient-primary-secondary !m-2">
 		<Accordion>
 			{#each shiftTexts as row, i}
