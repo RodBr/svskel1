@@ -11,7 +11,7 @@
 
 		<p class="my-4">
 			Call the Help Desk on (02 1234 5678)
-			<br />if you're intrested.
+			<br />if you're intrested. v2
 		</p>
 
 		<div class="absolute bottom-4 left-1/2 transform -translate-x-1/2">
