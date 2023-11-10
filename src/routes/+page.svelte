@@ -11,10 +11,10 @@
 
 		<p class="my-4">
 			Call the Help Desk on (02 1234 5678)
-			<br />if you're intrested. v2
+			<br />if you're intrested. v2.1
 		</p>
 
-		<div class="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+		<div class="absolute bottom-6 left-1/2 transform -translate-x-1/2">
 			<a class="btn variant-filled-primary" href="https://prospecthill.flowlogic.com.au">
 				Go to FlowLogic
 			</a>
