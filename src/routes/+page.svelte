@@ -2,19 +2,19 @@
 	import AvailableShifts from '$lib/AvailableShifts.svelte';
 </script>
 
-<div class="flex justify-center items-center">
-	<div class="space-y-10 text-center flex-col">
-		<div class="space-y-2">
-			<h3>The following shifts are available!</h3>
-		</div>
+<div class="justify-center items-center">
+	<div class="text-center">
+		<br />
+
+		<h3 class="my-4">The following shifts are available!</h3>
 		<AvailableShifts />
 
-		<p>
+		<p class="my-4">
 			Call the Help Desk on (02 1234 5678)
 			<br />if you're intrested.
 		</p>
 
-		<div class="space-x-2">
+		<div class="absolute bottom-4 left-1/2 transform -translate-x-1/2">
 			<a class="btn variant-filled-primary" href="https://prospecthill.flowlogic.com.au">
 				Go to FlowLogic
 			</a>

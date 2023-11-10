@@ -18,11 +18,13 @@
 				<!-- App Bar -->
 				<AppBar>
 					<svelte:fragment slot="lead">
-						<strong class="text-xl uppercase">Prospect Hill</strong>
+						<strong class="text-l uppercase">Prospect Hill</strong>
 					</svelte:fragment>
 					<svelte:fragment slot="trail">
-						<ShowDetails />
-						<LightSwitch />
+						<div class=" flex justify-end">
+							<ShowDetails />
+							<LightSwitch />
+						</div>
 					</svelte:fragment>
 				</AppBar>
 			</svelte:fragment>

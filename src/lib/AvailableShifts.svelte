@@ -29,17 +29,16 @@
 </script>
 
 <div class="!max-h-80 !overflow-y-scroll mx-4">
-	<div class="card p-4 bg-gradient-to-br variant-gradient-primary-secondary enable-scrollbars">
-		<Accordion>
+	<div class="card bg-gradient-to-br variant-gradient-primary-secondary enable-scrollbars">
+		<Accordion padding="py-1 px-4">
 			{#each shiftTexts as row, i}
-				<AccordionItem open={$showDetails}>
+				<AccordionItem open={$showDetails} class="!py-0">
 					<svelte:fragment slot="lead">😃</svelte:fragment>
 					<svelte:fragment slot="summary"><h2>{row.line1}</h2></svelte:fragment>
 					<svelte:fragment slot="content">
 						{#if row.line2 != ''}
-							<br />{row.line2}
+							{row.line2}
 						{/if}
-
 						{#if row.line3 != ''}
 							<br />{row.line3}
 						{/if}
