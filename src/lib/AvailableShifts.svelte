@@ -28,8 +28,8 @@
 	];
 </script>
 
-<div class="!max-h-80 !overflow-y-scroll !m-2 w-full md:w-auto">
-	<div class="card p-4 bg-gradient-to-br variant-gradient-primary-secondary !m-2">
+<div class="!max-h-80 !overflow-y-scroll mx-4">
+	<div class="card p-4 bg-gradient-to-br variant-gradient-primary-secondary enable-scrollbars">
 		<Accordion>
 			{#each shiftTexts as row, i}
 				<AccordionItem open={$showDetails}>
