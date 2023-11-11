@@ -18,7 +18,11 @@
 				<!-- App Bar -->
 				<AppBar>
 					<svelte:fragment slot="lead">
-						<strong class="text-l uppercase">Prospect Hill</strong>
+						<img
+							src="https://images.squarespace-cdn.com/content/v1/62ba8a53931d1b1025cb630f/ec2c66f3-748e-400f-974a-935ccb48e65f/PH+Logo+Heart+NDIS.png?format=1500w"
+							alt=""
+							width="60"
+						/>
 					</svelte:fragment>
 					<svelte:fragment slot="trail">
 						<div class=" flex justify-end">
