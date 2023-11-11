@@ -7,7 +7,25 @@
 	import { storePopup } from '@skeletonlabs/skeleton';
 
 	import ShowDetails from '$lib/ShowDetails.svelte';
+	import { onMount } from 'svelte';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
+
+	onMount(() => {
+		console.log('onMount');
+		const successCallback = (position: any) => {
+			console.log(position);
+		};
+
+		const errorCallback = (error: any) => {
+			console.log(error);
+		};
+
+		navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+
+		Notification.requestPermission().then((result) => {
+			console.log(result);
+		});
+	});
 </script>
 
 <div class="safe-top safe-left safe-right safe-bottom mx-4mx-4">
