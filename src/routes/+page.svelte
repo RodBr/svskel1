@@ -1,23 +1,23 @@
 <script>
-	import AvailableShifts from '$lib/AvailableShifts.svelte';
+	import AvailableShifts from '$lib/shifts/AvailableShifts.svelte';
+	import { locationAllowed, notificationsAllowed } from '$lib/store';
+
+	console.log('notifications: ' + $notificationsAllowed);
+	console.log('location: ' + $locationAllowed);
 </script>
 
-<div class="justify-center items-center text-center">
-	<p class="wrapper h-[5svh]" />
+{#if $notificationsAllowed && $locationAllowed}
+	<div class="mx-auto">
+		<AvailableShifts />
+	</div>
+{:else}
+	<div
+		class="card flex h-20 my-[30svh] mx-6 justify-center items-center !text-on-warning-token !bg-warning-500"
+	>
+		<h1 class="h3">Please enable Notifications and Location</h1>
+	</div>
+{/if}
 
-	<h3>The following shifts are available!</h3>
-	<p class="wrapper h-1" />
-	<AvailableShifts />
-
-	<p class="my-4">
-		Call the Help Desk on (02 1234 5678)
-		<br />if you're intrested.
-	</p>
-
-	<a class="btn variant-filled-primary mt-4" href="https://prospecthill.flowlogic.com.au">
-		Go to FlowLogic
-	</a>
-</div>
 <div class="flex text-xs justify-end mr-4">v2.1</div>
 
 <style lang="postcss">

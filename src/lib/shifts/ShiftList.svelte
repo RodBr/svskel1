@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
 
-	import { showDetails } from './store.js';
+	import { showDetails } from '../store.js';
 
 	let shiftTexts = [
 		{
@@ -28,9 +28,9 @@
 	];
 </script>
 
-<div class="h-[50svh] max-h-full !overflow-y-scroll mx-4">
-	<div class="card enable-scrollbars">
-		<Accordion padding="py-1 px-4">
+<div class="flex h-[50svh] max-h-full overflow-y-scroll">
+	<div class="card enable-scrollbars w-11/12 mx-auto">
+		<Accordion padding=" px-4 py-1">
 			{#each shiftTexts as row, i}
 				<AccordionItem open={$showDetails} class="!py-0">
 					<svelte:fragment slot="lead">😃</svelte:fragment>
