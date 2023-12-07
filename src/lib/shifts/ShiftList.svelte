@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
 
-	import { showDetails } from '../store.js';
+	import { showDetails } from '../stores.js';
 
 	let shiftTexts = [
 		{

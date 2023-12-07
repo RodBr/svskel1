@@ -1,13 +1,44 @@
-<script>
-	import AvailableShifts from '$lib/shifts/AvailableShifts.svelte';
-	import { locationAllowed, notificationsAllowed } from '$lib/store';
+<script lang="ts">
+	import { AvailableShifts } from '$lib';
+	import { locationAllowed, notificationsAllowed } from '$lib/stores.js';
 
-	console.log('notifications: ' + $notificationsAllowed);
+	let version = '3.0';
+	const options = {
+		enableHighAccuracy: true,
+		timeout: 5000,
+		maximumAge: 0
+	};
+	console.log('page.svlelte');
+
+	// beforeUpdate(() => {
+	const successCallback = (position: any) => {
+		console.log('position');
+		console.log(position);
+		$locationAllowed = true;
+	};
+
+	const errorCallback = (error: any) => {
+		console.log('error');
+		console.log(error);
+	};
+	console.log('get loc');
+	navigator.geolocation.getCurrentPosition(successCallback, errorCallback, options);
 	console.log('location: ' + $locationAllowed);
+
+	Notification.requestPermission().then((result) => {
+		if (result == 'granted') {
+			$notificationsAllowed = true;
+		} else {
+			$notificationsAllowed = false;
+		}
+		console.log('notifications: ' + $notificationsAllowed);
+	});
+	// });
 </script>
 
 {#if $notificationsAllowed && $locationAllowed}
 	<div class="mx-auto">
+		<!-- <ShowDetails /> -->
 		<AvailableShifts />
 	</div>
 {:else}
@@ -18,7 +49,7 @@
 	</div>
 {/if}
 
-<div class="flex text-xs justify-end mr-4">v2.1</div>
+<div class="flex text-xs justify-end mr-4">v{version}</div>
 
 <style lang="postcss">
 	@keyframes glow {

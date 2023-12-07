@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { SlideToggle } from '@skeletonlabs/skeleton';
-	import { showDetails } from '../store.js';
+	import { showDetails } from '../stores.js';
 	let isChecked: boolean = true;
 
 	function updateStore() {
