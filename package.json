@@ -35,7 +35,6 @@
 		"@tailwindcss/typography": "latest",
 		"@tailwindcss/forms": "latest",
 		"@types/node": "latest"
-		// "@sveltejs/vite-plugin-svelte": "^3.0.0"
 	},
 	"type": "module",
 	"dependencies": {
