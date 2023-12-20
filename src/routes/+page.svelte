@@ -43,9 +43,9 @@
 	</div>
 {:else}
 	<div
-		class="card flex h-20 my-[30svh] mx-8 justify-center items-center !text-on-warning-token !bg-warning-500"
+		class="card flex h-20 my-[30svh] mx-8 justify-center text-center items-center !text-on-warning-token !bg-warning-500"
 	>
-		<h1 class="h3">Please enable Notifications and Location</h1>
+		<h3 class="h3">Please enable Notifications and Location</h3>
 	</div>
 {/if}
 
