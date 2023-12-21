@@ -11,5 +11,11 @@
 			"type": "image/svg+xml",
 			"sizes": "any"
 		}
+	],
+	"shortcuts": [
+		{
+			"name": "Check Messages",
+			"url": "https://prospecthill.flowlogic.com.au/index.php?container=globe&view=globe_inbox&messagefolder=inbox"
+		}
 	]
 }
