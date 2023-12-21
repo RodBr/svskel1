@@ -24,15 +24,16 @@
 	console.log('get loc');
 	navigator.geolocation.getCurrentPosition(successCallback, errorCallback, options);
 	console.log('location: ' + $locationAllowed);
+	$notificationsAllowed = true;
 
-	Notification.requestPermission().then((result) => {
-		if (result == 'granted') {
-			$notificationsAllowed = true;
-		} else {
-			$notificationsAllowed = false;
-		}
-		console.log('notifications: ' + $notificationsAllowed);
-	});
+	// Notification.requestPermission().then((result) => {
+	// 	if (result == 'granted') {
+	// 		$notificationsAllowed = true;
+	// 	} else {
+	// 		$notificationsAllowed = false;
+	// 	}
+	// 	console.log('notifications: ' + $notificationsAllowed);
+	// });
 	// });
 </script>
 
