@@ -3,6 +3,8 @@
 	import { locationAllowed, notificationsAllowed } from '$lib/stores.js';
 
 	let version = '3.0';
+	let aa: any;
+
 	const options = {
 		enableHighAccuracy: true,
 		timeout: 5000,
@@ -14,6 +16,7 @@
 	const successCallback = (position: any) => {
 		console.log('position');
 		console.log(position);
+		aa = position;
 		$locationAllowed = true;
 	};
 
@@ -21,7 +24,7 @@
 		console.log('error');
 		console.log(error);
 	};
-	console.log('get loc');
+
 	navigator.geolocation.getCurrentPosition(successCallback, errorCallback, options);
 	console.log('location: ' + $locationAllowed);
 	$notificationsAllowed = true;
@@ -40,6 +43,11 @@
 {#if $notificationsAllowed && $locationAllowed}
 	<div class="mx-auto">
 		<!-- <ShowDetails /> -->
+		<div class="text-xs">
+			Latitude {aa.coords.latitude}
+			<br />
+			Longitude {aa.coords.longitude}
+		</div>
 		<AvailableShifts />
 	</div>
 {:else}
